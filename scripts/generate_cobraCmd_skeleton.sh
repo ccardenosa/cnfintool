@@ -4,9 +4,9 @@
 : ${AUTHOR:="Carlos Cardeñosa Pérez ccardenosa@redhat.com"}
 : ${LICENSE:="apache"}
 
-[[ ! -d ${APP} ]] && mkdir -p ${APP}
+#[[ ! -d ${APP} ]] && mkdir -p ${APP}
 
-pushd ${APP}
+#pushd ${APP}
 go mod init github.com/spf13/${APP}
 
 ccli=$(go env GOPATH)/bin/cobra-cli
@@ -64,4 +64,4 @@ for sc in ${subcmds[@]}; do
       ;;
   esac
 done
-popd
+#popd
