@@ -25,7 +25,7 @@ build:
 	GOARCH=amd64 GOOS=${GOOS} go build -o ${BINARY_PATH}-${GOOS} main.go
 
 run: build
-	${BINARY_PATH}
+	${BINARY_PATH}-${GOOS}
 
 clean:
 	go clean
